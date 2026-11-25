@@ -24,7 +24,7 @@ router.get('/google/callback', async (req, res) => {
        RETURNING id`,
       [p.sub, p.email, p.name, p.picture]
     );
-    res.cookie('token', signToken(rows[0].id), { httpOnly: true, sameSite: 'lax', secure: config.backendUrl.startsWith('https'), maxAge: 7 * 24 * 3600 * 1000 });
+    res.cookie('token', signToken(rows[0].id), { httpOnly: true, sameSite: 'lax', secure: config.cookieSecure, maxAge: 7 * 24 * 3600 * 1000 });
     res.redirect(`${config.frontendUrl}/dashboard`);
   } catch (e) {
     console.error('Google login failed', e);
@@ -81,3 +81,7 @@ router.get('/slack/callback', async (req, res) => {
 });
 
 export default router;
+
+
+
+

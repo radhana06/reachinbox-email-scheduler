@@ -9,8 +9,8 @@
     "start": "node dist/server.js"
   },
   "dependencies": {
-    "@bull-board/api": "^5.21.0",
-    "@bull-board/express": "^5.21.0",
+    "@bull-board/api": "^9.14.0",
+    "@bull-board/express": "^9.14.0",
     "@elastic/elasticsearch": "^8.14.0",
     "bullmq": "^5.12.0",
     "cookie-parser": "^1.4.6",
