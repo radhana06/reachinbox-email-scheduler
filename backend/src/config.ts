@@ -26,4 +26,5 @@ export const config = {
   maxEmailsPerHourPerSender: num('MAX_EMAILS_PER_HOUR_PER_SENDER', 50),
   senderCount: num('SENDER_COUNT', 3),
   runWorker: process.env.RUN_WORKER !== 'false',
+  cookieSecure: process.env.COOKIE_SECURE === 'true',
 };
